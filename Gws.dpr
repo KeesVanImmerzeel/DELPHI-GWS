@@ -23,7 +23,6 @@ uses
   AVGRIDIO,
   uTAbstractESRIgrid,
   uTSingleESRIgrid,
-  uGWSprogramSettings in 'uGWSprogramSettings.pas',
   uHelpUseAsAllokator in 'uHelpUseAsAllokator.pas' {FormHelp4UseAsAllokator},
   uTabPgDlg_Help_Use_As_Postprocessor in 'uTabPgDlg_Help_Use_As_Postprocessor.pas' {PagesDlgHelpUseAsPostProcessor},
   USelectAdoSetDialog in '..\..\ServiceComponents\Triwaco\AdoSets\SelectAdoSetDialog\USelectAdoSetDialog.pas' {AdoSetsForm};
@@ -135,7 +134,7 @@ begin
     if pos( 'DEBUG', Uppercase( DescriptionStr ) ) <> 0 then
       Mode := Interactive;
   end else if (ParamCount = 1) then begin  //Use as Post processor?
-    Mode := Unknown;
+    Mode := TMode.Unknown;
     ParamStr1 := ExpandFileName( ParamStr( 1 ) );
     if Tri4_IsTrishellModelIniFile( ParamStr1 ) then begin
       WriteToLogFileFMT( 'Model.ini-file specified: [%s]', [ParamStr1] ) ;
@@ -186,7 +185,7 @@ begin
 
             Mode := Batch;
             OKBtn.Click;  {-bereken gws}
-            Mode := Unknown;
+            Mode := TMode.Unknown;
 
           end; {-with OKBottomDlg1}
 
@@ -221,7 +220,7 @@ begin
         Except
           On E: Exception do begin
             HandleError( E.Message, True );
-            Mode := Unknown;
+            Mode := TMode.Unknown;
           end;
         end;
       Finally

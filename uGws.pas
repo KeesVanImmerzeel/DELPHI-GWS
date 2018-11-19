@@ -5,7 +5,7 @@ interface
 uses Windows, SysUtils, Classes, Graphics, Forms, Controls, StdCtrls,
   Buttons, ExtCtrls, Dialogs, LargeArrays, AdoSets, OpWString, {Mask,} FileCtrl,
   uTSingleESRIgrid, uError, uTriwacoGrid, AVGRIDIO, SelectAdoSetDialog,
-  jpeg, uTabstractESRIgrid, uGWSprogramSettings, uHelpUseAsAllokator,
+  jpeg, uTabstractESRIgrid, {uGWSprogramSettings,} uHelpUseAsAllokator,
   uTabPgDlg_Help_Use_As_Postprocessor, uPlane;
 
 {.$Define Test}

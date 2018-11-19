@@ -105,7 +105,6 @@
         <DCCReference Include="uGws.pas">
             <Form>OKBottomDlg1</Form>
         </DCCReference>
-        <DCCReference Include="uGWSprogramSettings.pas"/>
         <DCCReference Include="uHelpUseAsAllokator.pas">
             <Form>FormHelp4UseAsAllokator</Form>
         </DCCReference>
